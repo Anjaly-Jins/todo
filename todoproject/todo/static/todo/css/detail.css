@@ -1,0 +1,102 @@
+/* Full-page background image */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url("todo/static/images/detail.jpg"); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Optional overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+
+/* Container for details */
+.detail-container {
+    background-color: rgba(255,255,255,0.9); /* semi-transparent */
+    padding: 30px 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    color: #333;
+}
+
+/* Headline */
+.detail-container h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+/* Notes paragraph */
+.detail-container p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+/* Button group */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.edit-btn, .delete-btn, .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.back-btn {
+    background-color: #17a2b8;
+}
+
+.back-btn:hover {
+    background-color: #138496;
+}
+
+/* Button icons */
+.edit-btn img, .delete-btn img, .back-btn img {
+    width: 18px;
+    height: 18px;
+}

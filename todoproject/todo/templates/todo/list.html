@@ -1,0 +1,25 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'todo/css/list.css' %}">
+
+<h2>To-Do List</h2>
+<a href="{% url 'add_todo' %}" class="add-btn">
+  <img src="{% static 'todo/static/images/add.png' %}" alt="add icon" width="16" height="16">
+  Add New To-Do
+</a>
+<hr>
+
+<ul>
+{% for todo in todos %}
+  {% if todo.id %}
+    <li>
+      {{ todo.subject }}
+      <a href="{% url 'todo_detail' todo.id %}" class="view-btn">
+        <img src="{% static 'todo/static/images/list.png' %}" alt="view icon" width="16" height="16">
+        View
+      </a>
+    </li>
+  {% endif %}
+{% empty %}
+  <li>No to-dos yet</li>
+{% endfor %}
+</ul>

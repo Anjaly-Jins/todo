@@ -1,0 +1,90 @@
+/* Full-page background image */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url("todo/static/images/delete.jpg"); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Optional overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+
+/* Container */
+.delete-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    color: #333;
+}
+
+/* Headline */
+.delete-container h2 {
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* Confirmation text */
+.delete-container p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.delete-btn, .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.back-btn {
+    background-color: #6c757d;
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    background-color: #5a6268;
+}
+
+/* Button icons */
+.delete-btn img, .back-btn img {
+    width: 18px;
+    height: 18px;
+}

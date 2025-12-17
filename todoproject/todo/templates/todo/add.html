@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add To-Do</title>
+    <link rel="stylesheet" href="{% static 'todo/css/add.css' %}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add To-Do</h2>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="submit-btn">
+                <img src="{% static 'todo/static/images/add.png' %}" alt="add icon" width="18" height="18">
+                Save
+            </button>
+        </form>
+
+        <a href="{% url 'todo_list' %}" class="back-link">Back to List</a>
+    </div>
+</body>
+</html>
